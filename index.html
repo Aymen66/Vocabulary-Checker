@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Unit Conversion App</title>
+</head>
+<body>
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-lg-12" main >
+      <nav> 
+        <img id="logo" src="vc.jpg">
+      </nav>
+      <header>Vocabulary Checker</header>
+      <div class="section">
+        <input oninput="logOutNames()" type="text" id="input" placeholder="أكتب كلمة">    <span id="result"></span>
+        <button onclick="AddNewWord()" id="AddNewWord">Add a new word</button>
+        
+        
+        <ul id="ul-el"></ul>
+        <button onclick="show()" id="show">show</button>
+
+        <button  onclick="deleteBtn()" id="deleteBtn">Delete </button>
+        <button  onclick="hide()" id="hideBtn">Hide </button>
+
+
+
+      </div>
+
+    </div>
+    
+</div>
+  <script  src="index.js" charset="UTF-8"></script>
+
+  </body>
+</html>

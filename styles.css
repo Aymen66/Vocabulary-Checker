@@ -1,0 +1,98 @@
+body{
+    background-color: black;
+
+}
+#result{
+    color: black;
+}
+.container {
+    max-width: 40%;
+    min-height: 60vh;
+    border: 1px solid green;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    margin-top:5%;
+    background-color: grey;
+
+
+}
+input{
+    max-width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    font-size: 20px;
+    padding : 10px 20px;
+    border: 1px solid green;
+    
+    border-radius: 10px;
+    text-align: center;
+
+
+}
+#logo{
+max-width: 15%;
+border-radius: 10%;
+}
+nav{
+text-align: left;
+margin: 10px;
+}
+.section{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+.row{
+   margin: 3rem 0rem;
+   border: 1px solid green;
+   max-width: 80%;
+   min-height: 50vh;
+   margin-left: auto;
+   margin-right: auto;
+   border-radius: 10px;
+   background-color: gainsboro;
+
+}
+header{
+    margin: 20px 0px;
+    font-size: 30px;
+}
+button{
+    background-color: darkgray;
+    max-width: 50%;
+    padding: 10px 10px;
+   border-radius: 10px;
+   font-weight: bold;
+   margin-left: auto;
+   margin-right: auto;
+    margin-top: 5px;
+}
+button:hover{
+    opacity: 1;
+    background-color: aquamarine;
+}
+@media screen and (max-width: 700px) {
+    .container{
+        max-width: 100%;
+        height: auto;
+         margin-top:25%;
+
+    }
+    .row{
+        max-width: 80%;
+        height: auto;
+        padding-bottom: 10%;
+
+    }
+    
+    input{
+        font-size: 20px;
+        padding : 10px 20px;
+        max-width: 30%;
+    }
+}
