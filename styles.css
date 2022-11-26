@@ -6,7 +6,7 @@ body{
     color: black;
 }
 .container {
-    max-width: 40%;
+    max-width: 50%;
     min-height: 60vh;
     border: 1px solid green;
     text-align: center;
@@ -44,7 +44,9 @@ margin: 10px;
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
+   padding: 20px;
+   justify-content: center;
+
     
 }
 .row{
@@ -79,7 +81,7 @@ button:hover{
     opacity: 1;
     background-color: aquamarine;
 }
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 680px) {
     .container{
         max-width: 100%;
         height: auto;
