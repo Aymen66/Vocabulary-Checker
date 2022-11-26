@@ -89,7 +89,7 @@ button:hover{
 
     }
     .row{
-        width: 70%;
+        max-width: 70%;
         height: auto;
         padding-bottom: 10%;
 
