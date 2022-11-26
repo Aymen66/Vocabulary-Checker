@@ -101,7 +101,7 @@ button:hover{
         max-width: 40%;
     }
     button {
-        max-width: 70%;
+        width: 100%;
     }
     .section{
 
