@@ -83,13 +83,13 @@ button:hover{
 }
 @media screen and (max-width: 700px) {
     .container{
-       max-width: 90%;
+       width: 90%;
         height: 40;
          margin-top:1%;
 
     }
     .row{
-        width: 90%;
+        max-width: 90%;
         height: auto;
         padding-bottom: 10%;
 
@@ -99,13 +99,5 @@ button:hover{
         font-size: 20px;
         padding : 10px 20px;
         max-width: 40%;
-    }
-    .section{
-
-        display: block;
-       padding: 20px;
-       justify-content: center;
-    
-        
     }
 }
