@@ -87,17 +87,17 @@
           listItems += "<li>" + wordsList[i] + "</li>"
           
       }
-  
-      ulEl.innerHTML = listItems  
+      
+      ulEl.innerHTML = listItems 
     }show()
 
   
      function deleteBtn(){
-  
-      
-      wordsList.splice(-1, 1)      
-       
-      show()
+      let existingEntries = JSON.parse(localStorage.getItem("wordsList"));
+      existingEntries.splice(-1, 1);
+      localStorage.setItem("wordsList", JSON.stringify(existingEntries));
+     wordsList.pop()
+    show()
     
       }deleteBtn();
 
