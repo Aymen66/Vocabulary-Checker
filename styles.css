@@ -81,7 +81,7 @@ button:hover{
     opacity: 1;
     background-color: aquamarine;
 }
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 680px) {
     .container{
         max-width: 100%;
         height: auto;
