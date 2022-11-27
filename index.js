@@ -106,9 +106,11 @@
       }deleteBtn();
 
 
-      function hide() {
-       
-        
-        
-      }
+      function download(text, name, type) {   
+        var a = document.createElement("a");
+        var file = new Blob([wordsList], { type: type });
+        a.href = URL.createObjectURL(file);
+        a.download = name;  
+        a.click();
+     }
     
