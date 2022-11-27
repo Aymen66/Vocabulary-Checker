@@ -84,7 +84,7 @@
     function show(){
       let listItems = ""
       for (let i = 0; i < wordsList.length; i++) {
-          listItems += " ▫️ " + wordsList[i] + " "
+          listItems += " " + wordsList[i] + " ▫️ "
           
       }
       
