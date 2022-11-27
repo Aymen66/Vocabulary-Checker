@@ -1,36 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta propperty="og: title" content="Use my new app !">
+  <meta propperty="og: type" content="App">
+  <meta propperty="og: image" content="vc.jpg">
+  <meta propperty="og: description" content=" Vocabulary Checker is an app that helps you expand your vocabulary by adding the new words that you learn on a daily basis">
+  <meta propperty="og: name" content="Vocabulary Checker">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Unit Conversion App</title>
+    <title>Vocabulary Checker</title>
 </head>
 <body>
 <div class="container">
-  <div class="row">
-    <div class="col-12 col-lg-12" main >
-      <nav> 
-        <img id="logo" src="vc.jpg">
-      </nav>
-      <header>Vocabulary Checker</header>
-      <div class="section">
-        <input oninput="logOutNames()" type="text" id="input" placeholder="أكتب كلمة">    <span id="result"></span>
-        <button onclick="AddNewWord()" id="AddNewWord">Add a new word</button>
-        
-        <div class="buttonSection">
-          <ul id="ul-el"></ul>
-          <button onclick="show()" id="show">download your list</button>
+  <header>
+    <img id="logo" src="vc.jpg">
+    <h1 id="title">Vocabulary Checker</h1>
   
-          <button  onclick="deleteBtn()" id="deleteBtn">Delete the last word </button>
-          <button  onclick="hide()" id="hideBtn">Show/Hide your list </button>
-  
-  
-        </div>
+  </header>
+  <main>
+    <input oninput="logOutNames()" type="text" id="input" placeholder="أكتب كلمة">    <span id="result"></span>
+    <section>
+      <button onclick="AddNewWord()" id="AddNewWord">Add a new word</button>
+      <button  onclick="deleteBtn()" id="deleteBtn">Delete the last word </button>
 
-      </div>
-
-    </div>
-    
+    </section>
+    <section>
+        <button onclick="show()" id="show">download your list</button>
+        <button  onclick="hide()" id="hideBtn">Show/Hide your list </button>
+    </section>
+    <ul id="ul-el"></ul>
+      
+  </main>
+  
+  <footer>Copyright Checker App</footer>
 </div>
   <script  src="index.js" charset="UTF-8"></script>
 

@@ -84,11 +84,11 @@
     function show(){
       let listItems = ""
       for (let i = 0; i < wordsList.length; i++) {
-          listItems += "<li>" + wordsList[i] + "</li>"
+          listItems += " ▫️ " + wordsList[i] + " "
           
       }
       
-      ulEl.innerHTML = listItems 
+      ulEl.textContent = listItems 
     }show()
 
   

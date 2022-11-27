@@ -1,9 +1,10 @@
 body{
-    background-color: black;
+    background-image: url("backgroundTwo.jpg");
+    background-size:auto;
 
 }
 #result{
-    color: black;
+    color: white;
 }
 .container {
     max-width: 50%;
@@ -14,7 +15,8 @@ body{
     margin-right: auto;
     border-radius: 10px;
     margin-top:5%;
-    background-color: grey;
+   background-image: url("backgroundOne.jpg");
+
 
 
 }
@@ -22,7 +24,7 @@ input{
     max-width: 20%;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     font-size: 20px;
     padding : 10px 20px;
     border: 1px solid green;
@@ -32,55 +34,71 @@ input{
 
 
 }
+#title{
+    text-align: center;
+    margin-top: 0%;
+}
 #logo{
 max-width: 15%;
 border-radius: 10%;
 }
-nav{
-text-align: left;
-margin: 10px;
-}
-.section{
 
-    display: flex;
-    flex-direction: column;
-   padding: 20px;
-   justify-content: center;
 
-    
-}
-.row{
-   margin: 3rem 0rem;
+main{
+   margin-bottom: 10px;
    border: 1px solid green;
-   max-width: 80%;
+   max-width: 70%;
    min-height: auto;
    margin-left: auto;
    margin-right: auto;
    border-radius: 10px;
-   background-color: gainsboro;
-   margin-bottom: 50px;
+   background-size: cover;
+    display: block;
+    background-image: url("backgroundTwo.jpg");
+    background-size:contain;
+    padding: 20px;
+
 
 }
 header{
-    margin: 20px 0px;
-    font-size: 30px;
+    margin: 0px 0px;
+    padding: 10px 10px;
+    font-size: 20px;
+    color: black;
+    text-align: start;
 }
 button{
-    background-color: darkgray;
-    max-width: 50%;
-    padding: 10px 10px;
+    background-color: darkgrey;
+    color: black;
+    transition: all 150ms ease-in-out;
+
+    padding: 20px 0px;
    border-radius: 10px;
-   font-weight: bold;
-   margin-left: auto;
-   margin-right: auto;
-    margin-top: 5px;
-    margin-bottom: 20px;
+   font-weight:900;
+  margin: 10px;
+  width: 35%;
     
 }
 button:hover{
     opacity: 1;
-    background-color: aquamarine;
+    background-image: url("backgroundTwo.jpg");
+    color: whitesmoke;
+
 }
+footer{
+    padding: 10px;
+}
+ul{
+    padding:0px 0px;
+    margin: 10px  10px 10px  10px;
+    text-align: left;
+    left: 0px;
+    display: inline-block;
+    color: whitesmoke;
+}
+
+
+
 @media screen and (max-width: 680px) {
     .container{
        max-width: 100%;
@@ -88,16 +106,21 @@ button:hover{
          margin-top:1%;
 
     }
-    .row{
-        max-width: 90%;
-        height: auto;
-        padding-bottom: 10%;
-
-    }
+    
     
     input{
         font-size: 20px;
         padding : 10px 20px;
         max-width: 40%;
+    }
+    button{
+  width: 70%;
+  margin: 5px auto;
+  
+  
+}
+    section{
+        display: flex;
+        flex-direction: column;
     }
 }
