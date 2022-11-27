@@ -87,7 +87,11 @@
           listItems += " " + wordsList[i] + " ▫️ "
           
       }
-      
+      if (ulEl.style.display === "none") {
+        ulEl.style.display = "block";
+      } else {
+        ulEl.style.display = "none";
+      }
       ulEl.textContent = listItems 
     }show()
 
@@ -104,11 +108,7 @@
 
       function hide() {
        
-        if (ulEl.style.display === "none") {
-          ulEl.style.display = "block";
-        } else {
-          ulEl.style.display = "none";
-        }
+        
         
       }
     
