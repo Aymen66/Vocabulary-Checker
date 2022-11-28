@@ -95,7 +95,7 @@
       ulEl.textContent = listItems 
     }show()
 
-  
+    
      function deleteBtn(){
       let existingEntries = JSON.parse(localStorage.getItem("wordsList"));
       existingEntries.splice(-1, 1);
@@ -105,7 +105,7 @@
     
       }deleteBtn();
 
-
+  //  I used the Blob to excute the download button 
       function download(text, name, type) {   
         var a = document.createElement("a");
         var file = new Blob([wordsList], { type: type });
