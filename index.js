@@ -112,5 +112,5 @@
         a.href = URL.createObjectURL(file);
         a.download = name;  
         a.click();
-     }download()
+     }
     
