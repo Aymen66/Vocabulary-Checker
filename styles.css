@@ -1,9 +1,7 @@
 body{
-    background: linear-gradient(180deg, rgba(248, 140, 140, 0.61) 0%, #000000 99.98%, #514E4E 99.99%, rgba(0, 0, 0, 0) 100%);
-    position: relative;
-    max-width: 100%;
+    background-image: url("background.png");
+    
 
-    min-height: 90vh;
 }
 #result{
     color: white;
@@ -11,18 +9,14 @@ body{
 .container {
     max-width: 50%;
     min-height: 60vh;
-    border: none;
+    border: 1px solid white;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
     border-radius: 10px;
     margin-top:5%;
-    box-shadow: 0px 12px 51px 43px rgba(235, 229, 229, 0.23);
-    border: 1px solid whitesmoke;
     background: linear-gradient(180deg, rgba(248, 140, 140, 0.61) 0%, #000000 99.98%, #514E4E 99.99%, rgba(0, 0, 0, 0) 100%);
-
-
-
+    box-shadow: 0px 12px 51px 43px rgba(236, 205, 205, 0.23);
 }
 input{
     max-width: 20%;
@@ -31,7 +25,7 @@ input{
     margin-bottom: 20px;
     font-size: 20px;
     padding : 10px 20px;
-    border: 1px solid green;
+    border: 1px solid white;
     
     border-radius: 10px;
     text-align: center;
@@ -58,6 +52,8 @@ main{
    border-radius: 10px;
    background-size: cover;
     display: block;
+    background-image: url("backgroundTwo.jpg");
+    background-size:contain;
     padding: 20px;
 
 
@@ -70,8 +66,8 @@ header{
     text-align: start;
 }
 button{
-    background: linear-gradient(90deg, #FFFFFF 0%, #FDA43C 100%);
-    border-radius: 10px;    color: black;
+    background-color: darkgrey;
+    color: black;
     transition: all 150ms ease-in-out;
 
     padding: 20px 0px;
@@ -83,15 +79,14 @@ button{
 }
 button:hover{
     opacity: 1;
-    background: rgb(94, 56, 12);
-
+    background-image: url("backgroundTwo.jpg");
     color: whitesmoke;
     border: 1px solid whitesmoke;
 
 }
 footer{
     padding: 10px;
-    color: #FFFFFF;
+    color: white;
 }
 ul{
     padding:0px 0px;
@@ -105,18 +100,14 @@ ul{
 
 
 @media screen and (max-width: 680px) {
-    body{
-    min-height: 90vh;
+  
 
-    }
     .container{
        max-width: 100%;
-        height: 95vh;
+        height: 100vh;
          margin-top:1%;
 
-
     }
- 
 
     input{
         font-size: 20px;
@@ -135,8 +126,5 @@ ul{
     }
     #title{
         font-size: 25px;
-    }
-    footer{
-        margin-top: 30%;
     }
 }
