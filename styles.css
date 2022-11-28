@@ -107,7 +107,12 @@ ul{
 
     }
     
+    button:hover{
+        opacity: 1;
+        background-image: none;
+        color: whitesmoke;
     
+    }
     input{
         font-size: 20px;
         padding : 10px 20px;
