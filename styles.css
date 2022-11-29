@@ -66,8 +66,8 @@ header{
     text-align: start;
 }
 button{
-    background-color: darkgrey;
-    color: black;
+    background: linear-gradient(90deg, #FFFFFF 0%, #FDA43C 100%);
+    border-radius: 10px;    color: black;
     transition: all 150ms ease-in-out;
 
     padding: 20px 0px;
