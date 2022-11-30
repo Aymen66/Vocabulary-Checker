@@ -132,7 +132,7 @@
     // Start file download.
     document.getElementById("dwn-btn").addEventListener("click", function(){
     // Start the download of yournewfile.txt file with the content from the text area
-        var text = wordsList;
+        var text = document.getElementById("a");
         var filename = "yournewfile.txt";
         
         download(filename, wordsList);
