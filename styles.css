@@ -3,7 +3,7 @@ background-color: #FFFFFF;
 
 }
 #result{
-    color: white;
+    color: black;
 }
 .container {
     max-width: 30%;
@@ -140,7 +140,7 @@ ul{
     text-align: left;
     left: 0px;
     display: inline-block;
-    color: whitesmoke;
+    color: black;
 }
 
 
