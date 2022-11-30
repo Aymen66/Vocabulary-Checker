@@ -72,7 +72,7 @@ header{
     display: flex;
 }
 nav{
-    background: linear-gradient(20deg, #e6ae6f 0%, #ecb270 100%);
+background-color: #f3c795;
     height: 5vh;
     border-radius: 5px;
 
