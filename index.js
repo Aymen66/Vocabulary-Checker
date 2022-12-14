@@ -61,7 +61,8 @@
     
     
     function logOutNames(){
-      
+     inputEl.value=inputEl.value.toLowerCase();
+
       for (let i = 0; i<wordsList.length; i++){
         if (inputEl.value===wordsList[i]) {
          return result.textContent = "✅"+" صحيح";
