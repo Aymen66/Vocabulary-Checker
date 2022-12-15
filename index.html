@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="en">
 <head>
   <meta propperty="og: title" content="Use my new app !">
   <meta propperty="og: type" content="App">
@@ -11,58 +11,126 @@
     <title>Vocabulary Checker</title>
 </head>
 <body>
-<div class="container">
-  <header>
-    <img id="logo" src="vc.jpg">
-
-    <nav>
-      <ul>
-        <li><a href="index.html"class="nav-bar">Home </a></li>
-        <li> <a href="about.html"class="nav-bar">About </a></li>
-        <li> <a href="contactPage.html"class="nav-bar">Contact </a></li>
-      </ul>
-      
-    </nav>
-  
-  </header>
-  <main>
-    <section>
-      <h1>Vocabulary Checker</h1>
-
-    </section>
-    <section>
-    <article>
-      <img id="profile-img" src="img.png"><br>
-      <input oninput="logOutNames()" type="text" id="input" placeholder="أكتب كلمة">    <span id="result"></span>
-    </article>
-    </section>
-    <section class="buttons-setion">
-    <article>
-      <button  onclick="deleteBtn()" id="deleteBtn">حذف الكلمة الجديدة </button>
-      <button onclick="AddNewWord()" id="AddNewWord">إضافة كلمة جديدة</button>
-
-    </article>
-  <article>
-    <button  onclick="download()" id="dwn-btn">  تحميل القائمة كملف</button>
-
-    <button onclick="show()" id="show">إظهار / إخفاء القائمة</button>
-  </article>
-      
-    </section>
     
-    <ul id="ul-el"></ul>
+    
+      <div class="container">
+        <header>
+          <img id="logo" src="vc.jpg">
       
-  </main>
-  <footer>
-      <p>
-        <code>Copyright (c) 2022 Vocabulary Checker</code>
-      </p>
+          <nav>
+            <ul class="tabs">
+              <li data-tab-target="#homeEl" class="active tab">Home</li>
+              <li data-tab-target="#aboutEl" class="tab">About </li>
+              <li data-tab-target="#contactEl" class="tab">Contact </li>
+            </ul>
+          </nav>
+        
+        </header>
+           
+            <main>
+               
+                
+                  <div class="tab-content">
+                    <div id="homeEl" data-tab-content class="active">
+                      <div class="home">
+                        <section>
+                          <h1 id="app-name">Vocabulary Checker</h1>
+                    
+                        </section>
+                        <section>
+                        <article>
+                          <img id="profile-img" src="img.png"><br>
+                          <input required oninput="logOutNames()" type="text" id="input" placeholder="أكتب كلمة">    <span id="result"></span>
+                        </article>
+                        </section>
+                        <section class="buttons-setion">
+                        <article>
+                          <button type="submit" onclick="deleteBtn()" id="deleteBtn">حذف الكلمة الجديدة </button>
+                          <button type="submit" onclick="AddNewWord()" id="AddNewWord">إضافة كلمة جديدة</button>
+                    
+                        </article>
+                      <article>
+                        <button type="submit" onclick="download()" id="dwn-btn">  تحميل القائمة كملف</button>
+                    
+                        <button type="submit" onclick="show()" id="show">إظهار / إخفاء القائمة</button>
+                      </article>
+                          
+                        </section>
+                        
+                        <ul  id="ul-el">
+                          
+                        </ul>
+                          
+                      </div>
+                    </div>
+                    <div id="aboutEl" data-tab-content>
+                      <div class="about">
+                        <section>
+                          <article>
+                            <h1>Aymen Alkhawlani</h1>
+                            <p>I'm studying Front-End Web Development. I have a strong passion for programming languages. I'm a fast learner and always eager to learn!</p>
+                            <img src="profile.jpg" alt=" my profile "><br>
+                          </article>
+                          <article>
+                            <button class="btn-form" type="button"><a href="data-tab-target='#aboutEl' class='tab'">Contact</a> </button>
+                  
+                          </article>
+                        </section>
+                        
+                      </div>
 
-  </footer>
-  
-</div>
+                    </div>
+                    <div id="contactEl" data-tab-content>
+                      <div class="about">
+                        <section>
+                          <article>
+                            <p> Please contact me if you have any problems or suggestions to improve the app:</p>
+                              <address>
+                               
+                            <a href="tel:07956645957"> <img src="cell-phone-icon.jpg" class="icon"></a>
+                            <a href="mailto:alkhawlaniamen.gmail.com"><img class="icon"
+                                src="gmail.png"></a>
+                            <a href="https://goo.gl/maps/4utZFiTRn1RaTB9a8"> <img class="icon"
+                            src="location.png"></a>
+                            <a href="https://www.facebook.com/loy20201"> <img class="icon"
+                              src="facebook.png"></a>					
+                              <a href="#"> <img src="link-icon.png" class="icon"></a>
+                              <a href="https://wa.me/447956645957"> <img src="whatsapp.jpg" class="icon"></a>
+                               
+                             
+                              </address>
+                          </article>
+                        </section>
+                        <form action="https://formsubmit.co/8752a28c32d6c5be422399626f769b02" method="POST">
+                          <input class="contact-message" type="text" placeholder="Name" name="name" required><br>
+                          <input class="contact-message" type="email"  name="email"  placeholder="Email Address" required><br>
+                          <input class="contact-message" type="hidden" name="_next" value="https://aymen66.github.io/Vocabulary-Checker/">
+                          <input class="contact-message" type="hidden" name="_captcha" value="false">
+                          <textarea class="contact-message" type="text" name="message" placeholder="Write your message here" required></textarea><br>
+                          <button class="btn-form" type="submit">Send</button>
+                     </form>
+                    </div>
 
-  <script  src="index.js" charset="UTF-8"></script>
+                    </div>
+                  </div>
+            </main>
+            <footer>
+              
+              <p>
+                <code>Copyright (c) 2022 Vocabulary Checker</code>
+              </p>
+        
+          </footer>
+          
+          
+          
+        
+        
+        </div> 
+
+  <script src="index.js"></script>
 
   </body>
 </html>
+
+   
