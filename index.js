@@ -19,8 +19,7 @@ let vocabChecker = e => {
   let formData = JSON.parse(localStorage.getItem("formData")) || [];
   formData.push({
     word : document.getElementById("word").value,
-    // time : document.getElementById("time").value,
-    // date : document.getElementById("date").value,
+   
     meaning : document.getElementById("meaning").value,
     
 
@@ -84,27 +83,60 @@ if (table.style.display === "none") {
 }
 }show()
 
+// function download() {
+//   // Retrieve the data from localStorage
+//   var data = localStorage.getItem('formData');
+
+//   // Parse the data into a JavaScript object
+//   var obj = JSON.parse(data);
+
+//   // Get an array of the keys in the object
+//   var keys = Object.keys(obj);
+
+//   // Transform the array of keys into an array of rows, with each row being an array of values
+//   var rows = keys.map(key => [key, obj[key]]);
+
+//   // Convert each row into a string, with the values separated by commas
+//   var csv = rows.map(row => row.join(',')).join('\n');
+
+//   return csv;
+// }
+
  
-function download() {
-//   let table = document.getElementById("output");
-// let row = table.getElementsByTagName("td");
-//   var text = JSON.stringify(row);
+// function download() {
+// //   let table = document.getElementById("output");
+// // let row = table.getElementsByTagName("td");
+// //   var text = JSON.stringify(row);
   
 
-  var text = JSON.stringify(localStorage);
-  var filename = "My list.txt";
-  var blob = new Blob([text], { type: "text/plain" });
-  var anchor = document.createElement("a");
-  anchor.download = filename;
-  anchor.href = window.URL.createObjectURL(blob);
-  anchor.target = "_blank";
-  anchor.style.display = "none"; // just to be safe!
-  document.body.appendChild(anchor);
-  anchor.click();
-  document.body.removeChild(anchor);
-}
+//   var text = JSON.stringify(localStorage);
+//   var filename = "My list.CSV";
+//   var blob = new Blob([text], { type: "text/csv" });
+//   var anchor = document.createElement("a");
+//   anchor.download = filename;
+//   anchor.href = window.URL.createObjectURL(blob);
+//   anchor.target = "_blank";
+//   anchor.style.display = "none"; // just to be safe!
+//   document.body.appendChild(anchor);
+//   anchor.click();
+//   document.body.removeChild(anchor);
+// }
+
+// function download(){
+
+//   var item = localStorage.csv=localStorage;
+
+//   var ary = localStorage.getItem( "csv" ); //csv as a string
+//   var blob = new Blob([item], {type: "text/csv"});
+//   var url = URL.createObjectURL(blob);
+//   var a = document.querySelector("#results"); // id of the <a> element to render the download link
+//   a.href = url;
+//   a.download = "file.csv";
 
 
+
+// }
+ 
 
 
 function search() {
@@ -391,3 +423,52 @@ if (table.style.display === "none") {
 // }
 
 // }
+
+
+class TableCSVExporter {
+  constructor (table, includeHeaders = true) {
+      this.table = table;
+      this.rows = Array.from(table.querySelectorAll("tr"));
+
+      if (!includeHeaders && this.rows[0].querySelectorAll("th").length) {
+          this.rows.shift();
+      }
+  }
+
+  convertToCSV () {
+      const lines = [];
+      const numCols = this._findLongestRowLength();
+
+      for (const row of this.rows) {
+          let line = "";
+
+          for (let i = 0; i < numCols; i++) {
+              if (row.children[i] !== undefined) {
+                  line += TableCSVExporter.parseCell(row.children[i]);
+              }
+
+              line += (i !== (numCols - 1)) ? "," : "";
+          }
+
+          lines.push(line);
+      }
+
+      return lines.join("\n");
+  }
+
+  _findLongestRowLength () {
+      return this.rows.reduce((l, row) => row.childElementCount > l ? row.childElementCount : l, 0);
+  }
+
+  static parseCell (tableCell) {
+      let parsedValue = tableCell.textContent;
+
+      // Replace all double quotes with two double quotes
+      parsedValue = parsedValue.replace(/"/g, `""`);
+
+      // If value contains comma, new-line or double-quote, enclose in double quotes
+      parsedValue = /[",\n]/.test(parsedValue) ? `"${parsedValue}"` : parsedValue;
+
+      return parsedValue;
+  }
+}
