@@ -44,21 +44,21 @@
                            <img id="profile-img" src="img.png"><br>
                            <form role="form" onsubmit="toDo(event);">
                             <div class="form-group">
-                                <input oninput="logOut()" class="form-inputs"  type="text" name="activity" id="activity" placeholder=" إضافة كلمة "  required><span id="result"></span>
+                                <input oninput="logOut()" class="form-inputs"  type="text" name="activity" id="activity" placeholder=" Add a word "  required><span id="result"></span>
                             </div>
                           
                             <div class="form-group">
-                                <input  class="form-inputs" type="text" name="location" id="location" placeholder=" إضافة معنى" required>
+                                <input  class="form-inputs" type="text" name="location" id="location" placeholder="Add a meaning" required>
                             </div>
                             <div class="form-group">
-                                <button class="btn" type="submit">إضافة الكلمة والمعنى</button>
+                                <button class="btn" type="submit">Add </button>
                             </div>
                         </form>
                         </article>
                         <article>
-                          <button class="btn" onclick="deletebBtn()">حذف  الكلمة والمعنى<i class="fa fa-trash" style="margin:5px"></i>
+                          <button class="btn" onclick="deletebBtn()"> Delete the add<i class="fa fa-trash" style="margin:5px"></i>
 
-                            <button class="btn" type="submit" onclick="download()" id="dwn-btn">  تحميل القائمة كملف</button>
+                            <button class="btn"  onclick="download()" id="dwn-btn"> Download your list</button>
                         
                         </article>
                         </section>
@@ -112,7 +112,6 @@
                           <input class="contact-message" type="text" placeholder="Name" name="name" required><br>
                           <input class="contact-message" type="email"  name="email"  placeholder="Email Address" required><br>
                           
-                          <!-- <input class="contact-message" type="hidden" name="_next" value="https://aymen66.github.io/Vocabulary-Checker/"> -->
                           <input class="contact-message" type="hidden" name="_captcha" value="false">
                           <textarea class="contact-message" type="text" name="message" placeholder="Write your message here" required></textarea><br>
                           <button class="btn-form" type="submit">Send</button>
@@ -128,33 +127,33 @@
                                  <table>
                                   <thead >
                                       <tr>
-                                          <th class="activity" >الكلمة </th>
-                                          <th id="activity">المعنى</th>
+                                          <th class="activity" >Word </th>
+                                          <th id="activity">Meaning</th>
                                       </tr>
                                   </thead>
                                   <tbody >
                                      
                                   </tbody>
                                  </table>
-                                 <button class="btn" onclick="deletebBtn()">حذف الكلمة والمعنى<i class="fa fa-trash" style="margin:5px"></i>
+                                 <button class="btn" onclick="deletebBtn()"> Delete the add<i class="fa fa-trash" style="margin:5px"></i>
 
                               </div>
-                              <button class="btn" onclick="show()" id="show">  قائمة الكلمات </button>
+                              <button class="btn" onclick="show()" id="show"> Vocabulary List</button>
 
                               </button><br>
                           
 
                              </div>
                          
-                             <button class="btn" onclick="practiceBtn()">مارس</button>
+                             <button class="btn" onclick="practiceBtn()">Practice</button>
                            
                               <article id="practiceSection">
                                 <table  id="randomWord">
                                 
                                 </table><br>
-                                <button class="btn" onclick="getRandomWord()">الكلمة التالية </button>
+                                <button class="btn" onclick="getRandomWord()"> Next meaning </button>
 
-                                <button class="btn" onclick="showMeaning()" id="showMeaning">  إظهار المعنى </button>
+                                <button class="btn" onclick="showMeaning()" id="showMeaning"> Show the word </button>
                               </article>
                          
 
