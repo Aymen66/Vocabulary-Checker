@@ -8,30 +8,16 @@
     
 }
 
-    
-    /* #ul-el{
-    border: 1px solid black;
-    display: flex;
-    margin-top: 10px ;
-    margin-bottom: 10%;
-    padding-top: 0px;
-    
-    list-style-position: inside;
 
 
-    
-
-    
-} */
-
-  #ul-el .list {
+  /* #ul-el .list {
     margin: 10px 10px;
     padding: 0px;
     float: left;
     
     
 
-    }
+    } */
    
 
   
@@ -61,7 +47,7 @@
   
   .tab {
     cursor: pointer;
-    padding: 10px;
+    padding: 10px 5px;
     font-weight: bold;
     border-radius: 5px;
     
@@ -111,14 +97,13 @@ background-color: #FFFFFF;
 
 
 
-
-#input{
+input{
     max-width: 50%;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 20px;
-    font-size: 20px;
-    padding : 10px 20px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    padding : 5px 20px;
     border: 1px solid wheat;
     
     border-radius: 10px;
@@ -205,7 +190,7 @@ nav li{
 
     
     }
-.buttons-setion button{
+    .btn{
     background: linear-gradient(90deg, #FFFFFF 0%, #FDA43C 100%);
 
     border-radius: 10px; 
@@ -221,7 +206,7 @@ nav li{
   border: 1px solid rgb(123, 16, 16);
     
 }
-.buttons-setion button:active{
+.btn:active{
     opacity: 1;
     color: blue;
     border: 1px solid rgb(255, 255, 255);
@@ -271,9 +256,22 @@ img{
     border-radius: 10px;
     padding: 5%;
     background-image: url("vc.jpg");
-    background-size:cover;
+    background-size:contain;
     background-position: center;
     background-blend-mode:overlay;    
+}
+.list{
+    max-width: 80%;
+    min-height: auto;
+    /* background-color: rgb(45, 43, 43); */
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    padding: 5%;
+    /* background-image: url("vc.jpg"); */
+    /* background-size:contain;
+    background-position: center;
+    background-blend-mode:overlay;     */
 }
 p{
     line-height: 3vh;
@@ -334,6 +332,55 @@ margin: 5px 0px 0px 5px;
 }
 
 
+th{
+    border: 1px solid black;
+    padding: 5px;
+    width: 25%;
+    background: rgb(194,178,128);
+
+
+}
+table{
+    border: none;
+    display: inline-block;
+    padding: 0px;
+    line-height: 4vh;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    /* overflow: auto; */
+    max-width: 100%;
+
+    
+
+}
+tr{
+    color: rgb(0, 0, 0);
+    
+    border-bottom: black;
+
+    
+
+    
+
+}
+
+
+td{
+    border: 1px solid black;
+    padding: 5px 5px;
+    text-align: center;
+    color: whitesmoke;
+    text-shadow:  5px 5px 5px black;
+    background-color: #979494;
+    font-size: small;
+    width: 25%;
+    color: whitesmoke;
+    padding: 10px 20px;
+    
+
+}
+
 
 
 /* footer for all tabs */
@@ -353,18 +400,18 @@ footer{
 
  
      }
-     .buttons-setion{
+     /* .btn{
         display: flex;
         flex-direction: column;
-    }
+    } */
 
 
    
-    button{
+    /* button{
         max-width: 100%;
   
   
-}
+} */
 
     
     #title{

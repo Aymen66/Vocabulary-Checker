@@ -22,6 +22,8 @@
               <li data-tab-target="#homeEl" class="active tab">Home</li>
               <li data-tab-target="#aboutEl" class="tab">About </li>
               <li data-tab-target="#contactEl" class="tab">Contact </li>
+              <li data-tab-target="#list" class="tab">My List </li>
+
             </ul>
           </nav>
         
@@ -35,32 +37,37 @@
                       <div class="home">
                         <section>
                           <h1 id="app-name">Vocabulary Checker</h1>
-                    
+                         
                         </section>
                         <section>
                         <article>
-                          <img id="profile-img" src="img.png"><br>
-                          <input required oninput="logOutNames()" type="text" id="input" placeholder="أكتب كلمة">    <span id="result"></span>
+                           <img id="profile-img" src="img.png"><br>
+                           <form role="form" onsubmit="toDo(event);">
+                            <div class="form-group">
+                                <input oninput="logOut()" class="form-inputs"  type="text" name="activity" id="activity" placeholder=" إضافة كلمة "  required><span id="result"></span>
+                            </div>
+                          
+                            <div class="form-group">
+                                <input  class="form-inputs" type="text" name="location" id="location" placeholder=" إضافة معنى" required>
+                            </div>
+                            <div class="form-group">
+                                <button class="btn" type="submit">إضافة الكلمة والمعنى</button>
+                            </div>
+                        </form>
+                        </article>
+                        <article>
+                          <button class="btn" onclick="deletebBtn()">حذف  الكلمة والمعنى<i class="fa fa-trash" style="margin:5px"></i>
+
+                            <button class="btn" type="submit" onclick="download()" id="dwn-btn">  تحميل القائمة كملف</button>
+                        
                         </article>
                         </section>
                         <section class="buttons-setion">
                         <article>
-                          <button type="submit" onclick="deleteBtn()" id="deleteBtn">حذف الكلمة الجديدة </button>
-                          <button type="submit" onclick="AddNewWord()" id="AddNewWord">إضافة كلمة جديدة</button>
-                    
                         </article>
                       <article>
-                        <button type="submit" onclick="download()" id="dwn-btn">  تحميل القائمة كملف</button>
-                    
-                        <button type="submit" onclick="show()" id="show">إظهار / إخفاء القائمة</button>
                       </article>
-                          
                         </section>
-                        
-                        <ul  id="ul-el">
-                          
-                        </ul>
-                          
                       </div>
                     </div>
                     <div id="aboutEl" data-tab-content>
@@ -115,7 +122,43 @@
                     </div>
 
                     </div>
-                  </div>
+                    <div id="list" data-tab-content>
+                            <div class="list">
+                              <div  id="output">
+                                 <table>
+                                  <thead >
+                                      <tr>
+                                          <th class="activity" >الكلمة </th>
+                                          <th id="activity">المعنى</th>
+                                      </tr>
+                                  </thead>
+                                  <tbody >
+                                     
+                                  </tbody>
+                                 </table>
+                                 <button class="btn" onclick="deletebBtn()">حذف الكلمة والمعنى<i class="fa fa-trash" style="margin:5px"></i>
+
+                              </div>
+                              <button class="btn" onclick="show()" id="show">  قائمة الكلمات </button>
+
+                              </button><br>
+                          
+
+                             </div>
+                         
+                             <button class="btn" onclick="practiceBtn()">مارس</button>
+                           
+                              <article id="practiceSection">
+                                <table  id="randomWord">
+                                
+                                </table><br>
+                                <button class="btn" onclick="getRandomWord()">الكلمة التالية </button>
+
+                                <button class="btn" onclick="showMeaning()" id="showMeaning">  إظهار المعنى </button>
+                              </article>
+                         
+
+                    </div>
             </main>
             <footer>
               
