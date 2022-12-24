@@ -15,13 +15,13 @@ tabs.forEach(tab => {
   })
 })
 
-let toDo = e => {
+let vocabChecker = e => {
   let formData = JSON.parse(localStorage.getItem("formData")) || [];
   formData.push({
-    activity : document.getElementById("activity").value,
+    word : document.getElementById("word").value,
     // time : document.getElementById("time").value,
     // date : document.getElementById("date").value,
-    location : document.getElementById("location").value,
+    meaning : document.getElementById("meaning").value,
     
 
 
@@ -31,7 +31,7 @@ let toDo = e => {
   dispData();
   e.preventDefault();
   document.querySelector("form").reset();
-document.getElementById("activity").focus();
+document.getElementById("word").focus();
   formData.pop();
   result.textContent = ""
 
@@ -49,9 +49,9 @@ function dispData(){
     JSON.parse(localStorage.getItem("formData")).forEach(data =>{
       output.innerHTML += `
       <tr >
-      <td id="activity" >${data.activity}</td>
+      <td id="activity" >${data.word}</td>
      
-      <td>${data.location}</td>
+      <td>${data.meaning}</td>
 
       </tr>
 
@@ -138,16 +138,35 @@ function myFunction() {
 
 
 function logOut() {
-  let inputEl = document.getElementById("activity");
+  let inputEl = document.getElementById("word");
   let result = document.getElementById("result");
 inputEl.value=inputEl.value.toLowerCase();
 let table = document.getElementById("output");
 let row = table.getElementsByTagName("td");
 for (i = 0; i < row.length; i++) {
   if (inputEl.value===row[i].innerHTML.toLowerCase()) {
-   return  row = result.textContent="✅"+" صحيح";
+   return  row = result.textContent="✅"+" Correct";
   } else if (inputEl.value!==""){
-      result.textContent="❌"+" خطأ";				
+      result.textContent="❌"+" Wrong";				
+  }
+  else{
+     return row=result.textContent="";		
+  }
+  
+}
+
+}
+function logOutSearch() {
+  let inputEl = document.getElementById("searchBox");
+  let result = document.getElementById("resultTwo");
+inputEl.value=inputEl.value.toLowerCase();
+let table = document.getElementById("output");
+let row = table.getElementsByTagName("td");
+for (i = 0; i < row.length; i++) {
+  if (inputEl.value===row[i].innerHTML.toLowerCase()) {
+   return  row = result.textContent="✅"+" Correct";
+  } else if (inputEl.value!==""){
+      result.textContent="❌"+" Wrong";				
   }
   else{
      return row=result.textContent="";		

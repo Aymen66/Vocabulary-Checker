@@ -42,13 +42,14 @@
                         <section>
                         <article>
                            <img id="profile-img" src="img.png"><br>
-                           <form role="form" onsubmit="toDo(event);">
+                           <form role="form" onsubmit="vocabChecker(event);">
                             <div class="form-group">
-                                <input oninput="logOut()" class="form-inputs"  type="text" name="activity" id="activity" placeholder=" Add a word "  required><span id="result"></span>
+                                <input oninput="logOut()" class="form-inputs"  type="text" name="word" id="word" placeholder=" Add a word "  required><span id="result"></span>
+                                
                             </div>
                           
                             <div class="form-group">
-                                <input  class="form-inputs" type="text" name="location" id="location" placeholder="Add a meaning" required>
+                                <input  class="form-inputs" type="text" name="meaning" id="meaning" placeholder="Add a meaning" required>
                             </div>
                             <div class="form-group">
                                 <button class="btn" type="submit">Add </button>
@@ -135,7 +136,7 @@
                                      
                                   </tbody>
                                  </table>
-                                 <button class="btn" onclick="deletebBtn()"> Delete the add<i class="fa fa-trash" style="margin:5px"></i>
+                                 <!-- <button class="btn" onclick="deletebBtn()"> Delete the add<i class="fa fa-trash" style="margin:5px"></i> -->
 
                               </div>
                               <button class="btn" onclick="show()" id="show"> Vocabulary List</button>
@@ -151,6 +152,8 @@
                                 <table  id="randomWord">
                                 
                                 </table><br>
+                                <input oninput="logOutSearch()" class="form-inputs"  type="text" name="searchBox" id="searchBox" placeholder=" Spell the word "  required><span id="resultTwo"></span>
+
                                 <button class="btn" onclick="getRandomWord()"> Next meaning </button>
 
                                 <button class="btn" onclick="showMeaning()" id="showMeaning"> Show the word </button>
