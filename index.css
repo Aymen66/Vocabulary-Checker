@@ -18,7 +18,7 @@ padding-bottom: 0%;
 #darkMode{
   font-size: 10px;
   font-weight: 900;
-  padding: 7px;
+  padding: 4px;
   margin: 0px 5px;
   border-radius: 51px;
   border: 1px solid black;
@@ -541,6 +541,9 @@ footer{
           min-height: 100vh;
 
  
+     }
+     #darkMode{
+      font-size: 7px;
      }
     
      #aboutImg{

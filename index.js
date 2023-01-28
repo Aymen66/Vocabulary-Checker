@@ -17,7 +17,15 @@ tabs.forEach(tab => {
 
 function darkMode() {
   var element = document.body;
-  element.classList.toggle("dark-mode");
+  element.classList.toggle("dark-mode")
+  var change = document.getElementById("darkMode");
+  if (change.innerHTML == "Go Dark")
+  {
+      change.innerHTML = "Go Light";
+    }
+      else {
+        change.innerHTML = "Go Dark";
+                }
 }
 
 
