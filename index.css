@@ -9,8 +9,10 @@
 }
 
 /* dark Light Mode */
+.mode{
+text-align: left;
+}
 #darkMode{
-  float: left;
   font-size: 10px;
   font-weight: 900;
   padding: 7px;
