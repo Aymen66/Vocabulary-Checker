@@ -15,6 +15,10 @@ tabs.forEach(tab => {
   })
 })
 
+function darkMode() {
+  var element = document.body;
+  element.classList.toggle("dark-mode");
+}
 
 
 // codes for the table and the inputs
@@ -123,8 +127,12 @@ function deletebBtn(){
 
 function logOut() {
   let inputEl = document.getElementById("addWord");
+  // let inputMeaningEl = document.getElementById("addWMeaning");
+
   let result = document.getElementById("result");
 inputEl.value=inputEl.value.toLowerCase();
+// inputMeaningEl.value=inputMeaningEl.value.toLowerCase();
+
 let table = document.getElementById("table");
 let row = table.getElementsByTagName("td");
 for (i = 0; i < row.length; i++) {

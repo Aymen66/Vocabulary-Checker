@@ -8,6 +8,73 @@
     
 }
 
+/* dark Light Mode */
+#darkMode{
+  float: left;
+  font-size: 10px;
+  font-weight: 900;
+  padding: 7px;
+  margin: 5px;
+  border-radius: 51px;
+  border: 1px solid black;
+  box-shadow: 0px 3px 1px rgb(26, 25, 25);
+
+
+
+}
+body.dark-mode #darkMode{
+  box-shadow: 0px 3px 1px rgb(243, 242, 242);
+
+  
+}
+body.dark-mode .button{
+    --trash: #f5f9f9;
+    --trash-lines: #fcf9f9;
+
+  }
+  .button span {
+    display: block;
+    line-height: 20px;
+    font-weight:900;
+    opacity: var(--span-opacity, 1);
+    transform: translateX(var(--span-x, 0)) translateZ(0);
+    transition: transform 0.4s ease var(--span-delay, 0.2s), opacity 0.3s ease var(--span-delay, 0.2s);
+  
+}
+body.dark-mode ul{
+  background-color: #77450b;
+  color: rgb(234, 231, 231);
+}
+body.dark-mode button{
+  background: linear-gradient(90deg, #120202 0%, #281704 100%);
+  color: rgb(215, 213, 213);
+  border: 1px solid rgb(56, 53, 53);
+  box-shadow: 0px 3px 1px rgb(189, 187, 187);
+
+}
+body.dark-mode {
+
+  background-color: #282D35;
+  color: rgb(234, 231, 231);
+}
+body.dark-mode input {
+
+  background-color: #282D35;
+  color: rgb(234, 231, 231);
+}
+body.dark-mode #homePageImg {
+
+  filter: brightness(50%);
+  
+}
+body.dark-mode #result {
+
+  background-color: #282D35;
+  color: rgb(234, 231, 231);
+}
+body.dark-mode #app-name{
+  color: rgb(254, 249, 249);
+}
 
 
   /* #ul-el .list {
@@ -124,6 +191,7 @@ input{
         margin-bottom: 20px;
     text-align: center;
     color: black;
+
     
 }
 #logo{
