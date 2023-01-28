@@ -538,7 +538,7 @@ footer{
     .container{
         max-width: 100%;
           margin-top:1%;
-          min-height: 100vh;
+          min-height: 99vh;
 
  
      }
@@ -579,7 +579,7 @@ footer{
         font-size: 30px;
     }
     footer{
-        margin-top: 10%;
+        margin-top: 4%;
     }
     #logo{
         max-width: 20%;
