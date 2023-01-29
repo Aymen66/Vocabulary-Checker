@@ -16,14 +16,7 @@ tabs.forEach(tab => {
 })
 
 // popups codes
-$(document).ready(function(){
-  if (sessionStorage.getItem('#myModal') !== "true"){
-    $('#myModal').modal("show");
-  
-    sessionStorage.setItem('#myModal', "true")
-  }
-  
-  })
+
 function darkMode() {
   var element = document.body;
   element.classList.toggle("dark-mode")
