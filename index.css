@@ -7,6 +7,13 @@
 
     
 }
+.newFeature{
+  font-size: large;
+}
+.newFeature span{
+  color: #416be9;
+}
+
 
 /* dark Light Mode */
 .mode{
