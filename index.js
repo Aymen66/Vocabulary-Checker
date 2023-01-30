@@ -15,7 +15,6 @@ tabs.forEach(tab => {
   })
 })
 
-// popups codes
 
 function darkMode() {
   var element = document.body;
