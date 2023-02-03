@@ -163,7 +163,7 @@ function logOutSearch() {
   let inputEl = document.getElementById("searchBox");
   let result = document.getElementById("resultTwo");
 inputEl.value=inputEl.value.toLowerCase();
-let table = document.getElementById("table");
+let table = document.getElementById("randomWord");
 let row = table.getElementsByTagName("td");
 for (i = 0; i < row.length; i++) {
   if (inputEl.value===row[i].innerHTML.toLowerCase()) {
@@ -207,7 +207,7 @@ function showMeaning(){
   let table = document.getElementById("randomWord");
   let row = table.querySelector("td");
   if (row.style.display === "none") {
-   return row.style.display = "block";
+   return row.style.display = "table";
 } else {
   row.style.display = "none";
 }
