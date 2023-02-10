@@ -145,7 +145,7 @@ inputEl.value=inputEl.value.toLowerCase();
 let table = document.getElementById("table");
 let row = table.getElementsByTagName("td");
 for (i = 0; i < row.length; i++) {
-  if (inputEl.value===row[i].innerHTML.toLowerCase().replace(/\s/g, '')) {
+  if (inputEl.value.toLowerCase()===row[i].innerHTML.toLowerCase().replace(/\s/g, '')) {
    return  row = result.textContent="✅"+" available";
   } else if (inputEl.value!==""){
       result.textContent="❌"+" Not available";				
