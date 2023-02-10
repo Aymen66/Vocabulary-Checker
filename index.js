@@ -139,7 +139,7 @@ function logOut() {
   // let inputMeaningEl = document.getElementById("addWMeaning");
 
   let result = document.getElementById("result");
-inputEl.value=inputEl.value.toLowerCase();
+// inputEl.value=inputEl.value.toLowerCase();
 // inputMeaningEl.value=inputMeaningEl.value.toLowerCase();
 
 let table = document.getElementById("table");
