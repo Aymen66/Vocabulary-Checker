@@ -1,3 +1,311 @@
+.WelcomebackModal{
+
+  display: block;
+  position: fixed;
+
+  left: 0%;
+  top: 0%;
+  padding: 10px;
+  border-radius: 10px;
+
+  color: white;
+  border: 1px solid black;
+  background-color: #060606;
+  transform: translate(calc(49vw - 50%), calc(20vh - 50%));
+  opacity: 1;
+  transition: all;
+}
+
+.WelcomebackModalMessage {
+ 
+
+  color: white;
+ 
+
+  
+}
+#profileEmail{
+  color: rgb(255, 255, 255);
+  margin:0px 5px 10px 5px;
+  padding: 0px;
+
+}
+  
+
+#btnControl:checked + label > #profileDetails-ShownPart #selectBtn, #uploadBtn{
+  background: linear-gradient(90deg, #FFFFFF 0%, #FDA43C 100%);
+
+  border-radius: 10px; 
+     color: black;
+  transition: all 150ms ease-in-out;
+  box-shadow: 0px 2px 1px rgb(6, 6, 6);
+border: 1px solid black;
+  padding: 7px 10px;
+  font-weight: bold;
+  /* font-size: small; */
+  max-width: fit-content;
+  font-size: 10px;
+
+
+}
+
+#btnControl:checked + label > #profileDetails-ShownPart  #profileDetails-HiddenPart {
+  display: flex;
+}
+ #profileUsername{
+  color: rgb(245, 245, 246);
+  margin:10px 5px 0px 5px;
+  padding: 0px;
+
+}
+#myimg{
+  width: 50%;
+  margin: 0px 5px;
+  border-radius:50%;
+  /* min-height: 18vh; */
+  aspect-ratio: 3/3;
+}
+#upprogress{
+  color: rgb(245, 245, 246);
+
+}
+#yourProfile{
+  color: black;
+  font-weight: bold;
+  padding-bottom: 0px;
+  padding: 0px;
+
+
+
+
+
+}
+/* #img{
+  width: 20%;
+  margin: 10px 5px;
+
+} */
+/* css for sign up and sign in tab */
+.tabPage {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  border-radius: 5%;
+  margin-bottom: 5%;
+
+
+}
+
+/* Style the buttons inside the tab */
+.tabPage button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tabPage button:hover {
+  background-color: #ddd;
+}
+/* #changeProfilePic{
+ display: flex;
+} */
+/* Create an active/current tablink class */
+.tabPage button.active {
+  background-color: #ccc;
+
+}
+
+/* Style the tab content */
+.tabcontentPage {
+  display: none;
+  padding: 6px 12px;
+  /* border: 1px solid #ccc; */
+  border-top: none;
+}
+/* .tabPage {
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  overflow: hidden;
+}
+
+.tabPage button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+.tabPage button:hover {
+  background-color: #ddd;
+}
+
+.tabPage button.active {
+  background-color: #ccc;
+}
+
+.tabcontentPage {
+  display: none;
+  padding: 6px 12px;
+  border-top: none;
+} */
+
+#signin-page{
+  /* display: none; */
+  display: flex;
+flex-direction: column;
+justify-content: space-between;
+
+max-width: 100%;
+/* border-bottom: 1px solid white; */
+
+}
+#signin-page input {
+  /* padding: 3%; */
+  max-width: 100%;
+  padding: 3px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+
+}
+/* #signin-page form {
+  display: flex;
+  justify-content: center;
+} */
+
+
+
+#signup-container{
+  border-radius: 10%;
+display: none;
+flex-direction: column;
+position: fixed;
+align-items: center;
+background-color: rgb(29, 27, 27);
+padding: 2%;
+box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+max-width: 25%;
+top: 0;
+left: 0;
+transform: translate(calc(49vw - 50%), calc(50vh - 50%));
+}
+
+#signup-page h1 {
+  text-align: center;
+  margin-bottom: 10%;
+}
+
+#signup-evalidation, #signin-evalidation{
+  color: rgb(255, 0, 0);
+  display: none;
+  flex-direction: column;
+}
+#signup-evalidation p, #signin-evalidation p{
+  color: rgb(255, 0, 0);
+  padding: 0%;
+  margin: 0%;
+}
+
+/* #email {
+  margin-bottom: 3%;
+} */
+
+#signUp , #signin{
+  margin-bottom: 10px;
+  /* margin-right: auto;
+  margin-left: auto; */
+  background: linear-gradient(90deg, #FFFFFF 0%, #FDA43C 100%);
+
+    border-radius: 10px; 
+       color: black;
+    transition: all 150ms ease-in-out;
+    box-shadow: 0px 2px 1px rgb(255, 254, 254);
+border: 1px solid black;
+    padding: 5px 5px;
+    font-weight: bold;
+    width: 40%;
+  margin-top: 10% !important;
+
+}
+
+#signup-page input {
+  /* padding: 3%; */
+  max-width: 100%;
+  margin-top: 3px;
+  margin-bottom: 3px;
+
+}
+ /* #signUp {
+  width: 55%;
+  margin-top: 10%;
+} */
+#signup-page{
+/* border-top: 1px solid white; */
+
+display: none;
+flex-direction: column;
+max-width: 100%;
+justify-content: space-between;
+align-items: center;
+/* position: fixed;
+background-color: rgb(29, 27, 27);
+padding: 3%;
+box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+max-width: 75%;
+top: 0;
+left: 0;
+transform: translate(calc(50vw - 50%), calc(40vh - 50%)); */
+}
+/* #signup-container {
+ 
+text-align: center;
+border-radius: 5%;
+
+} */
+#notCheckedWarning{
+  color: red;
+  display: none;
+}
+#signup-page label{
+  color: whitesmoke;
+}
+#logoutBtn{
+  display: none;
+  margin-bottom: 10px;
+  /* margin-right: auto;
+  margin-left: auto; */
+  background: linear-gradient(90deg, #FFFFFF 0%, #FDA43C 100%);
+
+    border-radius: 10px; 
+       color: black;
+    transition: all 150ms ease-in-out;
+    box-shadow: 0px 2px 1px rgb(6, 6, 6);
+border: 1px solid black;
+    padding: 5px 5px;
+    font-weight: bold;
+    max-width: fit-content;
+}
+#logoutBtn:active{
+  background: #060606;
+  color: white;
+
+}
+
+
+
+
+
+
+/* end of css of signup and signin */
 [data-tab-content] {
     display: none;
     border-radius: 10px; 
@@ -7,7 +315,42 @@
 
     
 }
+#userVocabListEl div {
+  list-style-type: none;
+  margin: 5px;
+  padding: 0px;
+  display: flex;
+  
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  
+}
+#userVocabListEl p {
+  text-align: center;
+  font-size: medium;
+  margin-left: auto;
+  margin-right: auto;
 
+}
+#userVocabListEl {
+  background-color: #979494;
+  padding: 10px;
+
+  border-radius: 10px;
+
+  
+}
+/* #table li {
+  font-size: 20px;
+  background-color: #FFFDF8;
+  padding: 15px;
+  border-radius: 8px;
+  flex-grow: 1;
+  text-align: center;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
+} */
 
 
 /* dark Light Mode */
@@ -15,17 +358,98 @@
 text-align: left;
 margin-bottom: 0%;
 padding-bottom: 0%;
+display: flex;
+flex-direction: column;
+align-items: left;
+justify-content: left;
+max-width: 20%;
+/* position: relative; */
+margin-top: -15px;
+}
+#btnControl {
+  display: none;
+}
+#btnControl:checked + label > #profileDetails-ShownPart  #yourProfile {
+  font-size: 25px;
+  color: white;
+  margin-top: 10px;
 
+}
+
+#btnControl:checked + label > #profileDetails-ShownPart {
+  width: 20%;
+position: absolute;
+align-items: center;
+border: 1px solid black;
+background-color: #464545;
+align-items: center;
+margin: 1px 10px;
+border-radius: 8%;
+}
+#btnControl:checked + label > #profileDetails-ShownPart #changeProfilePic{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  gap: 0px 5px;
+  margin-top: 10px;
+  
+
+}
+/* #btnControl:checked + label > #profileDetails-ShownPart #upprogress{
+  margin: 0px;
+  padding: 0px;
+  display: none;
+
+} */
+#profileDetails-ShownPart{
+  display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+border: 1px solid rgb(189, 188, 188);
+  padding: 5px 0px 0px 0px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 10px;
+  box-shadow: 0px 3px 1px rgb(26, 25, 25);
+
+  
+}
+
+
+/* #profileDetails-ShownPart:hover{
+  width: 25%;
+position: absolute;
+align-items: center;
+border: 1px solid black;
+background-color: #464545;
+align-items: center;
+margin: 1px 10px;
+border-radius: 8%;
+
+}
+#profileDetails-ShownPart:hover #yourProfile {
+  font-size: 25px;
+  color: white;
+} */
+#profileDetails-HiddenPart {
+  display: none;
+flex-direction: column;
+justify-content: space-between;
+align-items: center;
 }
 #darkMode{
   font-size: 10px;
   font-weight: 900;
   padding: 4px;
-  margin: 0px 5px;
+  /* margin: 0px 5px; */
   border-radius: 51px;
   border: 1px solid black;
   box-shadow: 0px 3px 1px rgb(26, 25, 25);
 
+  max-width: fit-content;
+  left: 0%;
 
 
 }
@@ -97,8 +521,37 @@ body.dark-mode #app-name{
     
     
   }
-  
+  #randomWord #btnConfirm{
+    display: none;
+
+  }
  
+ #randomWord  {
+  list-style-type: none;
+  margin: 5px;
+  padding: 0px;
+  display: flex;
+  
+  /* gap: 10px; */
+  align-items: center;
+  justify-content: center;
+  
+}
+
+#randomWord .meaningParagraph{
+  background-color: #0c277a;
+width: 20vw;
+border-radius: 10px;
+cursor: pointer;
+}
+#randomWord .wordParagraph{
+  display: none;
+  background-color: orange;
+  width: 20vw;
+  border-radius: 10px;
+  cursor: pointer;
+
+}
   
   .tabs {
     display: flex;
@@ -193,6 +646,7 @@ input{
     #app-name{
         font-size:30px;
         margin-bottom: 20px;
+        margin-right: -20px;
     text-align: center;
     color: black;
 
@@ -236,7 +690,7 @@ margin: 5px 0px 0px 5px;
    margin-right: auto;
    border-radius: 10px;
    background-size: cover;
-    padding-bottom: 5%;
+    padding-bottom: 0%;
 
 }
 header{
@@ -300,6 +754,9 @@ nav li{
   min-height: auto;
   border: 1px solid rgb(123, 16, 16);
     
+}
+#dude{
+  color: black;
 }
 .btn:active{
     opacity: 1;
@@ -457,7 +914,7 @@ margin: 5px 0px 0px 5px;
 }
 
 
-th{
+/* th{
     border: 1px solid black;
     padding: 5px;
     width: 25%;
@@ -473,7 +930,6 @@ table{
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    /* overflow: auto; */
     max-width: 100%;
 
     
@@ -488,12 +944,18 @@ tr{
 
     
 
+} */
+
+#btnConfirm{
+  margin-right: 5px;
+
 }
 
-.removeBtn{
+.fa-trash{
   font-size: 15px;
+
 }
-#hideRow{
+/* #hideRow{
   background: none;
   padding: 0px;
   border: none;
@@ -520,7 +982,7 @@ td{
     padding: 10px 20px;
     
 
-}
+} */
 
 
 
@@ -534,6 +996,56 @@ footer{
 
    
 @media screen and (max-width: 700px) {
+/* #profileDetails-ShownPart:hover #uploadBtn, #selectBtn, #logoutBtn, #yourProfile {
+
+  font-size: 8px;
+}
+  #profileDetails-ShownPart:hover{
+    width: fit-content;
+    margin: 1px 50px;
+    
+  } */
+  #yourProfile{
+  font-size: 11px;
+
+
+  }
+  #btnControl:checked + label > #profileDetails-ShownPart #changeProfilePic{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    gap: 0px 0px;
+    margin-top: 5px;
+    
+  
+  }
+  #profileDetails-ShownPart{
+    width: 100%;
+  }
+#btnControl:checked + label > #profileDetails-ShownPart {
+  width: 50%;
+}
+#btnControl:checked + label > #profileDetails-ShownPart  #selectBtn, #uploadBtn ,#logoutBtn {
+  font-size: 7px;
+  padding: 6px 6px;
+
+
+}
+#btnControl:checked + label > #profileDetails-ShownPart  #yourProfile {
+  font-size: 15px;
+  color: white;
+
+}
+
+
+/* #btnControl:checked + label > #profileDetails-ShownPart > #myimg{
+  width: 70%;
+
+} */
+  /* #myimg{
+  width: 70%;
+  } */
     .container{
         max-width: 100%;
           margin-top:1%;
@@ -854,4 +1366,127 @@ html {
 }
 *:before, *:after {
   box-sizing: inherit;
+}
+
+/* Float cancel and delete buttons and add an equal width */
+
+/* Add a color to the cancel button */
+.cancelbtn {
+  background-color: darkslategray;
+  color: white;
+  padding: 5px;
+  float: left;
+  width: 30%;
+  margin-right: 5px;
+
+
+}
+
+/* Add a color to the delete button */
+.deletebtn {
+  background-color: darkslategray;
+  float: right;
+  width: 30%;
+  padding: 5px;
+  margin-left: 5px;
+  color: white;
+
+}
+
+/* Add padding and center-align text to the container */
+.modalcontainer {
+  padding: 16px;
+  text-align: center;
+  
+
+}
+.modalcontainer > h1 {
+  color: black;
+  font-size: large;
+
+}
+.modalcontainer > p {
+  color: black;
+
+}
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  /* left: 50;
+right: 50; */
+
+left: 0;
+  top: 0;
+  max-width: 70%; /* Full width */
+  position: fixed; /* Stay in place */
+
+  /* overflow: auto;  */
+  padding-top: 0px;
+  /* margin-top: 20%; */
+  text-align: center;
+/* margin-left: auto;
+margin-right: auto; */
+transform: translate(calc(50vw - 50%), calc(40vh - 50%));
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 0% auto 0% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 100%; /* Could be more or less, depending on screen size */
+  border-radius: 5%;
+
+}
+
+/* Style the horizontal ruler */
+/* hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+} */
+ 
+/* The Modal Close Button (x) */
+/* .close {
+  position: absolute;
+  right: 0;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+} */
+
+.close:hover,
+.close:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+  
+}
+
+/* Change styles for cancel button and delete button on extra small screens */
+@media screen and (max-width: 600px) {
+  .cancelbtn, .deletebtn {
+     width: 100%;
+  }
+  
+  #signup-container{
+     max-width: 80%;
+     font-size: small;
+     transform: translate(calc(49vw - 50%), calc(45vh - 50%));
+    padding: 5%;
+    }
+  #signup-page{
+    font-size: small;
+
+  }
+  #signin-page{
+    font-size: small;
+
+  }
+
 }

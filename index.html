@@ -11,6 +11,7 @@
   <script src=
   "https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js">
       </script>
+
   <link rel="stylesheet" href=
   "https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -34,43 +35,115 @@
 
             </ul>
           </nav>
-        
+
         </header>
-        <div class="mode">
+        
+        <div id="mode" class="mode">
+          <input type="checkbox" id="btnControl"/>
+          <label class="btnControl" for="btnControl">
+            <div id="profileDetails-ShownPart">
+              <img  id="myimg" />
+            <p id="yourProfile"> Your Profile</p>
+  
+            <div id="profileDetails-HiddenPart">
+              <div id="changeProfilePic">
+                <label id="upprogress"></label><br><br>
+                <button id="selectBtn">Select Profile picture</button>
+  
+                <button id="uploadBtn">Upload Picture</button>
+              </div>
+              <p id="profileUsername"></p>
+              <p id="profileEmail"></p>
+          <button id="logoutBtn">Log out</button>
+            </div>
+            </div>
+
+          </label>
+         
           <button id="darkMode" onclick="darkMode()">Go Dark</button>
-        </div><br>
+
+        </div>
+
             <main>
              
                 
                   <div class="tab-content">
                     <div id="homeEl" data-tab-content class="active">
                       <div class="home">
+                        <div id="signup-container">
+                          <div class="tabPage">
+                            <button class=" active tablinksPage" onclick="openCity(event, 'signin-page')">Sign in</button>
+                            <button class="tablinksPage" onclick="openCity(event, 'signup-page')">Sign up</button>
+                          </div>
+                          
+                          <div id="signin-page" class="active tabcontentPage">
+                            <!-- <h1>Sign in</h1> -->
+                              <input id = "signin-email" type = "text" placeholder = "Email"/>
+                            <input id = "signin-password" type = "password" placeholder = "Password"/>
+                             
+
+                            <div id='signin-evalidation'>
+                              <p>the Email address or the password is incorrect .</p>
+                            
+                            </div>
+                            <input type="submit" id = "signin" name="signin_submit" value="sign in"/>
+                     
+                            </div>
+                          
+                          
+                          <div id="signup-page" class="tabcontentPage">
+                            <!-- <h1>Sign up</h1> -->
+                              <input id = "username" type = "text" name="username" placeholder = "username"/>
+                          <input id = "email" type = "text" placeholder = "Email"/>
+                  
+                          <input id = "password" type = "password" placeholder = "Password"/>
+                          
+                          <div id='signup-evalidation'>
+                            <p>Email address should be in full format.</p>
+                            <p>Password should be 6 characters long.</p>
+                          </div>
+                          <!-- <div id="profilePic"></div>
+                          <input  id = "profilePicInput" type = "file" placeholder = "profile pic"/>
+
+                          <div> -->
+                            <label for="agreement"><input type="checkbox" name="agreement" required value= "yes" name="agreement" id="agreement"/> The data will be saved in a remote database.Do you agree? </label>
+                            <p id="notCheckedWarning">Please check the checkbox to continue.</p>
+                            <input type="submit" id = "signUp" name="signup_submit" value="sign up"/>
+                          </div>
+                          </div>
+                  
+                          
+                          
+                          
+                        
+                        </div>
+  
+                        <div id="WelcomebackModal">
+                          <h1  id="WelcomebackModalMessage"></h1>
+                        </div>
                         <section>
                           <h1 id="app-name">Vocabulary Checker</h1>
-                         
+
                         </section>
                         <section>
                           <img id="homePageImg" src="img.png"><br>
 
                         <article>
-                          <!-- <div class="row mt-5"> -->
                             <div class="col-md-3">
-                              <input oninput="logOut()"  type="text" class="form-control" placeholder="Write a word" id="addWord"><br><span id="result"></span>
+                              <input   type="text" class="form-control" placeholder="Write a word" id="addWord"><br><span id="result"></span>
                             </div>
                             <div class="col-md-3">
-                              <!-- <label for="model">Enter Lapop Name</label> -->
                               <input type="text" class="form-control" placeholder="Write a meaning" id="addMeaning">
                             </div>
                             
-                          <!-- </div> -->
                         <article>
-                          <button  type="button"  class="btn" onclick="addBtn()">Add</button>
+                          <button  type="button" id="add-button"  class="btn" onclick="addBtn()">Add</button>
 
                         </article>
                         </article>
                        
                         </section>
-                        <section class="buttons-setion" onclick="deletebBtn()">
+                        <!-- <section class="buttons-setion" id="deletebBtn" onclick="deletebBtn()">
                           <article>
                             <button class="button" > 
                               <div class="trash">
@@ -89,7 +162,7 @@
                           
                           </article>
                       
-                        </section>
+                        </section> -->
                       </div>
                     </div>
                     <div id="aboutEl" data-tab-content>
@@ -147,16 +220,31 @@
                     <div id="list" data-tab-content>
                       <button class="btn"  onclick="show()" id="show"><i  class="fa fa-folder"></i> Vocabulary List</button><br>
 
-                      <div id="table"></div>
-                      <button class="btn" onclick="practiceBtn()">Practice</button>
+                      <div id="userVocabListEl"></div>
+                      <div id="id01" class="modal">
+                        <form class="modal-content" action="/action_page.php">
+                          <div class="modalcontainer">
+                            <!-- <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span> -->
+
+                            <h1>Confirm to delete</h1>
+                            <p>Are you sure you want to do this ?</p>
+                          
+                            <div class="clearfix">
+                              <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">No</button>
+                              <button type="button" id="btnRemove"  class="deletebtn">Yes</button>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                      <button class="btn" id="practiceBtn" onclick="practiceBtn()">Practice</button>
                            
                       <article id="practiceSection">
-                        <table  id="randomWord">
+                        <div  id="randomWord">
                         
-                        </table><br>
+                        </div><br>
                         <input oninput="logOutSearch()" class="form-inputs"  type="text" name="searchBox" id="searchBox" placeholder=" Spell the word "  required><span id="resultTwo"></span><br>
   
-                        <button class="btn" onclick="getRandomWord()"> Get meaning </button>
+                        <button class="btn" id="getRandomWord" onclick="getRandomWord()"> Get meaning </button>
   
                         <button class="btn" onclick="showMeaning()" id="showMeaning"> Show the word </button>
                       </article>
@@ -172,13 +260,13 @@
         
           </footer>
           
-          <div  id="new-feature-popup">
+          <!-- <div  id="new-feature-popup">
             <p class="new">Update:</p>
             <p class="new">The bug in "Spell the word "search box in Practice Section has been fixed.</p>
             <button id="close-popup">Close</button>
-          </div>
+          </div> -->
           
-          <script>
+          <!-- <script >
             if (!localStorage.getItem("popupShown-bug")) {
               document.getElementById("new-feature-popup").style.display = "block";
               localStorage.setItem("popupShown-bug", true);
@@ -189,9 +277,9 @@
             });
           
             
-          </script>
+          </script> -->
           
-          <style>
+          <!-- <style>
             #new-feature-popup {
               display: none;
               position: absolute;
@@ -205,7 +293,7 @@
             .new{
               color: rgb(254, 254, 255);
             }
-          </style>
+          </style> -->
           
          
 
@@ -213,8 +301,7 @@
         </div> 
         
 
-  <script src="index.js"></script>
- 
+  <script src="index.js" type="module"></script>
        <script>
         document.querySelectorAll('.button').forEach(button => button.addEventListener('click', e => {
   if(!button.classList.contains('delete')) {
@@ -225,6 +312,23 @@
 }));
 
        </script>
+       <script >
+
+        function openCity(evt, cityName) {
+  var i, tabcontentPage, tablinksPage;
+  tabcontentPage = document.getElementsByClassName("tabcontentPage");
+  for (i = 0; i < tabcontentPage.length; i++) {
+    tabcontentPage[i].style.display = "none";
+  }
+  tablinksPage = document.getElementsByClassName("tablinksPage");
+  for (i = 0; i < tablinksPage.length; i++) {
+    tablinksPage[i].className = tablinksPage[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "flex";
+  evt.currentTarget.className += " active";
+}
+       </script>
+     
   </body>
 </html>
 
