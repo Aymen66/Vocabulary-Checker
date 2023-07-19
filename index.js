@@ -862,3 +862,24 @@ let listRef = database.ref(database, `userVocabList/${currentUsers}`)
 
 
 }
+
+// document.getElementById("body").addEventListener("click", hideProfile);
+
+// function hideProfile(event) { 
+
+//   if(event.target.id!="signup-page")
+//   { 
+//       document.getElementById("signup-page").style.display="none";
+//     }
+//   }
+// var modal = document.getElementById('signup-page"');
+// $('body').click(function(e) {
+//   if (!$(e.target).closest('#signup-page').length){
+//       $("#signup-page").hide();
+//   }
+// });
+// window.onclick = function(event) {
+//   if (event.target == modal) {
+//     modal.style.display = "none";
+//   }
+// }
