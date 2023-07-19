@@ -884,8 +884,14 @@ let listRef = database.ref(database, `userVocabList/${currentUsers}`)
 //   }
 // }
 let hideAnchor = document.getElementById("hideAnchor")
-hideAnchor.addEventListener('click', () => {
-  console.log('I run only once! 😇');
-  document.getElementById("selectBtn").style.display = "block";
 
-}, { once: true });
+
+function handlieHideAnchor() {
+  document.getElementById("selectBtn").style.display = "block";
+  document.getElementById("hideAnchor").style.display = "none";
+hideAnchor.removeEventListener("click", handlieHideAnchor);
+
+}
+
+hideAnchor.addEventListener("click", handlieHideAnchor);
+

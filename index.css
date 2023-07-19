@@ -32,7 +32,7 @@
 }
   
 
-#btnControl:checked + label > #profileDetails-ShownPart #selectBtn, #uploadBtn, #hideAnchor{
+#btnControl:checked + label > #profileDetails-ShownPart #selectBtn, #uploadBtn {
   background: linear-gradient(90deg, #FFFFFF 0%, #FDA43C 100%);
 
   border-radius: 10px; 
@@ -993,9 +993,9 @@ footer{
     display:inline-block;
 }
 
-#hideAnchor{
+/* #hideAnchor{
   display: none;
-}
+} */
    
 @media screen and (max-width: 700px) {
 /* #profileDetails-ShownPart:hover #uploadBtn, #selectBtn, #logoutBtn, #yourProfile {
@@ -1011,9 +1011,9 @@ footer{
     display: none;
 
   }
-  #hideAnchor{
+  /* #hideAnchor{
     display: block;
-  }
+  } */
   #yourProfile{
   font-size: 11px;
 
