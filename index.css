@@ -32,7 +32,7 @@
 }
   
 
-#btnControl:checked + label > #profileDetails-ShownPart #selectBtn, #uploadBtn{
+#btnControl:checked + label > #profileDetails-ShownPart #selectBtn, #uploadBtn, #hideAnchor{
   background: linear-gradient(90deg, #FFFFFF 0%, #FDA43C 100%);
 
   border-radius: 10px; 
@@ -993,7 +993,9 @@ footer{
     display:inline-block;
 }
 
-
+#hideAnchor{
+  display: none;
+}
    
 @media screen and (max-width: 700px) {
 /* #profileDetails-ShownPart:hover #uploadBtn, #selectBtn, #logoutBtn, #yourProfile {
@@ -1005,6 +1007,13 @@ footer{
     margin: 1px 50px;
     
   } */
+  #selectBtn{
+    display: none;
+
+  }
+  #hideAnchor{
+    display: block;
+  }
   #yourProfile{
   font-size: 11px;
 
@@ -1026,7 +1035,7 @@ footer{
 #btnControl:checked + label > #profileDetails-ShownPart {
   width: 50%;
 }
-#btnControl:checked + label > #profileDetails-ShownPart  #selectBtn, #uploadBtn ,#logoutBtn {
+#btnControl:checked + label > #profileDetails-ShownPart  #selectBtn, #uploadBtn ,#logoutBtn, #hideAnchor {
   font-size: 7px;
   padding: 6px 6px;
 

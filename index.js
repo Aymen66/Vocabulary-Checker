@@ -883,3 +883,9 @@ let listRef = database.ref(database, `userVocabList/${currentUsers}`)
 //     modal.style.display = "none";
 //   }
 // }
+let hideAnchor = document.getElementById("hideAnchor")
+hideAnchor.addEventListener('click', () => {
+  console.log('I run only once! 😇');
+  document.getElementById("selectBtn").style.display = "block";
+
+}, { once: true });
