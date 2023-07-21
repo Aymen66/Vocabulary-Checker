@@ -1007,13 +1007,11 @@ footer{
     margin: 1px 50px;
     
   } */
-  #selectBtn{
-    display: none;
 
+  #hide{
+    /* display: none; */
+    color: black;
   }
-  /* #hideAnchor{
-    display: block;
-  } */
   #yourProfile{
   font-size: 11px;
 
@@ -1035,7 +1033,7 @@ footer{
 #btnControl:checked + label > #profileDetails-ShownPart {
   width: 50%;
 }
-#btnControl:checked + label > #profileDetails-ShownPart  #selectBtn, #uploadBtn ,#logoutBtn, #hideAnchor {
+#btnControl:checked + label > #profileDetails-ShownPart #selectBtn, #uploadBtn ,#logoutBtn {
   font-size: 7px;
   padding: 6px 6px;
 

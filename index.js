@@ -823,45 +823,45 @@ auth.signOut();
 window.location.reload()  //   to refresh the page so that  the current user's data that is retrieved in "My List" can be displayed wihtout having to refresh the page 
 
 })
-document.getElementById("deletebBtn").addEventListener("click", deletebBtn);
+// document.getElementById("deletebBtn").addEventListener("click", deletebBtn);
 
-function deletebBtn(item){
-  const user = auth.currentUser;
-const currentUsers = user.uid
-// Get a reference to the tasks list
-// var tasksRef = database().ref('userVocabList');
-// tasksRef = ref(database, `userVocabList/${currentUsers}`)
-let vocabID = item[0];
-const database = firebase.database();
+// function deletebBtn(item){
+//   const user = auth.currentUser;
+// const currentUsers = user.uid
+// // Get a reference to the tasks list
+// // var tasksRef = database().ref('userVocabList');
+// // tasksRef = ref(database, `userVocabList/${currentUsers}`)
+// let vocabID = item[0];
+// const database = firebase.database();
 
-// Retrieve the list from the database
-let listRef = database.ref(database, `userVocabList/${currentUsers}`)
+// // Retrieve the list from the database
+// let listRef = database.ref(database, `userVocabList/${currentUsers}`)
 
-// let listRef = ref(database, `userVocabList/${currentUsers}`)
-// var listRef = firebase.database().ref(`userVocabList/${currentUsers}`);
+// // let listRef = ref(database, `userVocabList/${currentUsers}`)
+// // var listRef = firebase.database().ref(`userVocabList/${currentUsers}`);
 
 
-// remove(listRef)
+// // remove(listRef)
 
-  // onValue(listRef, function(snapshot) {
-    listRef.limitToLast(1).once('value', function(snapshot) {
-      snapshot.forEach(function(childSnapshot) {
-        // Remove the last item
-        childSnapshot.ref.remove()
-          .then(function() {
-            console.log("Last item deleted successfully.");
-          })
-          .catch(function(error) {
-            console.error("Error deleting last item:", error);
-          });
-      });
-    });
+//   // onValue(listRef, function(snapshot) {
+//     listRef.limitToLast(1).once('value', function(snapshot) {
+//       snapshot.forEach(function(childSnapshot) {
+//         // Remove the last item
+//         childSnapshot.ref.remove()
+//           .then(function() {
+//             console.log("Last item deleted successfully.");
+//           })
+//           .catch(function(error) {
+//             console.error("Error deleting last item:", error);
+//           });
+//       });
+//     });
 
   
 
 
 
-}
+// }
 
 // document.getElementById("body").addEventListener("click", hideProfile);
 
@@ -883,15 +883,30 @@ let listRef = database.ref(database, `userVocabList/${currentUsers}`)
 //     modal.style.display = "none";
 //   }
 // }
-let hideAnchor = document.getElementById("hideAnchor")
+// let hideAnchor = document.getElementById("hideAnchor")
+// hideAnchor.addEventListener('click', () => {
+//   console.log('I run only once! 😇');
+//   document.getElementById("selectBtn").style.display = "block";
+//   document.getElementById("hideAnchor").style.display = "none";
+
+// }, { once: true });
+
+// function handleClick() {
+//   console.log("Button clicked!");
+//   document.getElementById("selectBtn").style.display = "block";
+
+  
+//   // Remove the event listener after it's executed
+//   document.getElementById("hideAnchor").removeEventListener("click", handleClick);
+// }
+
+// document.getElementById("hideAnchor").addEventListener("click", handleClick);
+const hideAnchor = document.getElementById('hide');
+
+hideAnchor.addEventListener('click', () => {
+  // 👇️ hide button
+  window.open("https://aymen66.github.io/Vocabulary-Checker/");
+  // hideAnchor.style.display = 'none';
 
 
-function handlieHideAnchor() {
-  document.getElementById("selectBtn").style.display = "block";
-  document.getElementById("hideAnchor").style.display = "none";
-hideAnchor.removeEventListener("click", handlieHideAnchor);
-
-}
-
-hideAnchor.addEventListener("click", handlieHideAnchor);
-
+});
