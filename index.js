@@ -906,11 +906,12 @@ const hideAnchor = document.getElementById('hide');
 hideAnchor.addEventListener('click', () => {
 
   // 👇️ hide button
+  // document.getElementById("ahide").href = '';
+
   // window.open("https://aymen66.github.io/Vocabulary-Checker/");
   document.getElementById("selectBtn").style.display = "block";
-  document.getElementById("aHide").href = '';
 
-  hideAnchor.style.display = 'none';
+  // hideAnchor.style.display = 'none';
 
 
 

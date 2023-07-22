@@ -32,7 +32,7 @@
 }
   
 
-#btnControl:checked + label > #profileDetails-ShownPart #selectBtn, #uploadBtn {
+#btnControl:checked + label > #profileDetails-ShownPart #selectBtn, #uploadBtn, #hide {
   background: linear-gradient(90deg, #FFFFFF 0%, #FDA43C 100%);
 
   border-radius: 10px; 
@@ -1008,9 +1008,9 @@ footer{
     
   } */
 
-  #selectBtn{
+  /* #selectBtn{
     display: none;
-  }
+  } */
   #yourProfile{
   font-size: 11px;
 
