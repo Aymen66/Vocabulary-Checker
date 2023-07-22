@@ -993,9 +993,9 @@ footer{
     display:inline-block;
 }
 
-/* #hideAnchor{
+#hide{
   display: none;
-} */
+} 
    
 @media screen and (max-width: 700px) {
 /* #profileDetails-ShownPart:hover #uploadBtn, #selectBtn, #logoutBtn, #yourProfile {
@@ -1016,6 +1016,9 @@ footer{
 
 
   }
+  #hide{
+    display: block;
+  } 
   #btnControl:checked + label > #profileDetails-ShownPart #changeProfilePic{
     display: flex;
     align-items: center;
