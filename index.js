@@ -904,9 +904,14 @@ window.location.reload()  //   to refresh the page so that  the current user's d
 const hideAnchor = document.getElementById('hide');
 
 hideAnchor.addEventListener('click', () => {
+
   // 👇️ hide button
-  window.open("https://aymen66.github.io/Vocabulary-Checker/");
-  // hideAnchor.style.display = 'none';
+  // window.open("https://aymen66.github.io/Vocabulary-Checker/");
+  document.getElementById("selectBtn").style.display = "block";
+  document.getElementById("aHide").href = '';
+
+  hideAnchor.style.display = 'none';
+
 
 
 });
